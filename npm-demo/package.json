@@ -1,0 +1,20 @@
+{
+  "name": "npm-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^5.4.13",
+    "sunil-add": "file:sunil-Add",
+    "sunil-subtract": "^1.0.0",
+    "underscore": "^1.9.1"
+  },
+  "devDependencies": {
+    "jshint": "^2.10.1"
+  }
+}
