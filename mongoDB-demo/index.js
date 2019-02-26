@@ -32,10 +32,11 @@ createCourse();
 
 async function getCourses(){
     courses = await Course
-                        .find({isPublished:true})
-                        .limit(4)
+                        .find()
+                             
                         .sort({name:1}) //-1 for descending 
-                        .select({name:1,tags:1});
+                        //.select({name:1,tags:1});
+                        .count();
     console.log(courses);
 }
 getCourses();
