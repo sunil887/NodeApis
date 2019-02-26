@@ -1,11 +1,12 @@
 console.log('before');
 
-        getuser(1)
-                    .then( result =>{console.log('hello');getRepository(result.username)})
-                    .then( repos =>console.log('repos are :',repos))
-                    .catch(err=> console.log(err));
-    
+async function getRepos(){
+    const user = await getuser(1);
+    const getRepos = await getRepository(user.username);
+    console.log('repos are :',getRepos);
+}    
 
+getRepos();
 
 function getuser(id){
     return new Promise((resolve,reject)=>{
