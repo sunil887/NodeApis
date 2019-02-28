@@ -17,7 +17,6 @@ function getuser(id){
     });
 }
 
-
 function getRepository(username){
     return new Promise((resolve,reject)=>{
         setTimeout(()=>{

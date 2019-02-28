@@ -22,7 +22,6 @@ async function createCourse(){
             author:'mosh',
             tags:['angular 2','frontend'],
             isPublished: false
-            
         });
 
         const result =  await course.save();
