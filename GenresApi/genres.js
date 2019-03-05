@@ -2,11 +2,23 @@
 const express = require('express');
 const router = express.Router();
 const Joi = require('Joi');
-
+const mongoose = require('mongoose');
 
 const schema =  {
     GenreName:Joi.string().required()
 }
+
+const genreSchema = mongoose.Schema({   
+    name:{
+        type:String,
+        required:true,
+        minlength:5,
+        maxlength:50
+
+    } 
+})
+
+const Genre = mongoose.model('Genres',genreSchema);
 
 const genres = [  
     {id:1, GenreName:'Action'},
